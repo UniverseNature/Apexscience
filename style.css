@@ -277,6 +277,17 @@ footer div a:hover {
   .section-3 {
     grid-template-columns: repeat(2, auto);
   }
+
+  .section-1 img {
+    min-height:13rem;
+    margin:auto 0;
+  }
+
+  .section-2 img {
+    min-height:10rem;
+    margin:auto 0;
+  }
+
 }
 
 @media only screen and (max-width: 800px) {
@@ -293,9 +304,6 @@ footer div a:hover {
 }
 
 @media only screen and (max-width: 700px) {
-  .section-3 {
-    display: block;
-  }
 
   .flex {
     flex-direction: column;
@@ -381,5 +389,31 @@ footer div a:hover {
 
   .menu-btn.open .menu-btn__burger::after {
     transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+  .section-1 img {
+    margin-bottom: 0;
+  }
+
+  .section-1 img,.section-2 img {
+    max-width: 13rem;
+    margin:0 auto;
+  }
+
+  .section-1 p, .section-2 p {
+    min-width: 100%;
+    font-size: 22px;
+  }
+
+  .section-3 {
+    display: block;
+  }
+
+  .section-3 div img {
+    max-height: 10rem;
+  }
+
+  footer div p {
+    max-width: none;
   }
 }
