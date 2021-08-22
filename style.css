@@ -108,6 +108,12 @@ div ul {
   background-color: rgb(rgba(255, 1, 1, 0.2));
 }
 
+.section-1 h1 {
+  background-image: linear-gradient(to right, red, #350b0b);
+  background-clip: text;
+  color: transparent;
+}
+
 .section-1 p {
   width: 70%;
   font-size: 20px;
@@ -154,15 +160,59 @@ div ul {
 
 .section-2 {
   background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(163, 0, 0, 1) 22%,
-    rgba(0, 0, 0, 1) 83%
-  );
   color: white;
   padding-top: 3rem;
+  background-image: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(163, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 85%
+  );
+  background-size: 300%;
+  animation: section-2-bg 15s infinite alternate;
 }
+
+@keyframes section-2-bg {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+/*  animation: section-2-animation 20s infinite alternate;
+  background-color: black;
+}
+
+@keyframes section-2-animation {
+  0% {
+    background-image: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(163, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 85%
+    );
+  }
+
+  50% {
+    background-image: linear-gradient(
+      90deg,
+      rgb(0, 0, 0, 1) 0%,
+      rgb(255, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 85%
+    );
+  }
+
+  100% {
+    background-image: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(163, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 85%
+    );
+  }
+}*/
 
 .section-2 div {
   float: left;
@@ -279,15 +329,14 @@ footer div a:hover {
   }
 
   .section-1 img {
-    min-height:13rem;
-    margin:auto 0;
+    min-height: 13rem;
+    margin: auto 0;
   }
 
   .section-2 img {
-    min-height:10rem;
-    margin:auto 0;
+    min-height: 10rem;
+    margin: auto 0;
   }
-
 }
 
 @media only screen and (max-width: 800px) {
@@ -304,7 +353,6 @@ footer div a:hover {
 }
 
 @media only screen and (max-width: 700px) {
-
   .flex {
     flex-direction: column;
   }
@@ -395,12 +443,14 @@ footer div a:hover {
     margin-bottom: 0;
   }
 
-  .section-1 img,.section-2 img {
+  .section-1 img,
+  .section-2 img {
     max-width: 13rem;
-    margin:0 auto;
+    margin: 0 auto;
   }
 
-  .section-1 p, .section-2 p {
+  .section-1 p,
+  .section-2 p {
     min-width: 100%;
     font-size: 22px;
   }
